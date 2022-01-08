@@ -1,10 +1,10 @@
 # syllabus
-- build jar
-- Dockerfile and Docker Compose
-- Github Actions
-- Push Docker image on dockerHub
-- Deploy java image and mysql on kubernetes with Helm Chart 
-- deploy traefik ingress contoller
+1. build jar
+2. Dockerfile and Docker Compose
+3. Github Actions
+4. Push Docker image on dockerHub
+5. Deploy java image and mysql on kubernetes with Helm Chart 
+6. deploy traefik ingress contoller
 
 ## steps
 1. build the jar 
@@ -55,7 +55,7 @@ $ helm create myapp
 $ helm install myapp .
 ```
 
-###### Deploy Traefik as Ingress-Controller 
+6. ###### Deploy Traefik as Ingress-Controller 
 >* *Note: the purpose of using [traefik](https://doc.traefik.io/traefik/getting-started/install-traefik/) instead of nginx-controler to avoid annotaion problems.*
 ```
 $ kubectl create ns traefik-ingress
