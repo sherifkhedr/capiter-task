@@ -89,10 +89,10 @@ cat >> /etc/hosts
 <metallb ip>  myapp.capiter.com   
 ```
 
-9. ## create vm on aws with terraform in automted fashion
+9. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
 
-## Resourses that used in this Task
+10. Resourses that used in this Task
 - [Kubernetes.io](https://kubernetes.io/)
 - [Traefik.io](https://doc.traefik.io/traefik/)
 - [MetalLB](https://metallb.universe.tf/installation/)
