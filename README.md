@@ -79,8 +79,14 @@ configInline:
 $ helm repo add metallb https://metallb.github.io/metallb
 $ helm install metallb metallb/metallb -f values.yaml
 ```
-######## to caccess from my browser
+###### to caccess from my browser
 ```
 cat >> /etc/hosts
 <metallb ip>  myapp.capiter.com   
 ```
+## Resourses that used in this Task
+- [Kubernetes.io](https://kubernetes.io/)
+- [Traefik.io](https://doc.traefik.io/traefik/)
+- [MetalLB](https://metallb.universe.tf/installation/)
+
+
