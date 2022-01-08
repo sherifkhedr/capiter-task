@@ -33,7 +33,7 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
  
  - ###### Deploy mysql with Helm Chart as custer with 3 instances ; i used [Bitnami Helm Chart](https://bitnami.com/stack/mysql/helm) for the deploy
  
- `kubectl ns mydb`
+ `kubectl create ns mydb`
  ```
  helm install mysql \
   --set global.storageClass=rook-cephfs\
@@ -43,4 +43,9 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
   --set auth.username=test\
   --set auth.password=test \
     bitnami/mysql -n mydb
+    
+    > *Note: the previous command will create one master and 2 slaves also create `springboot_mysql_example` database and use `rook-cephfs` as persistent volume
+    
+      
+      
     
