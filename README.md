@@ -4,7 +4,9 @@
 3. Github Actions
 4. Push Docker image on dockerHub
 5. Deploy java image and mysql on kubernetes with Helm Chart 
-6. deploy traefik ingress contoller
+6. install traefik ingress contoller
+7. install Prometheus on kubernetes
+8. How to debug mysql and java performance
 
 ## steps
 1. build the jar 
@@ -66,7 +68,7 @@ $ helm install --namespace=traefik-ingress \
 ```
 - create ingress file mentioned in 
 
-- Bonus:  Deploy MetalLB as load Balancer in from of Ingress-Controller , this is Bonus from me
+- ######Bonus:  Deploy MetalLB as a load Balancer in from of Ingress-Controller , this is Bonus from me
 ```
 MetalLB configs are set in values.yaml under configInLine:
 configInline:
