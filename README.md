@@ -9,7 +9,7 @@
 ## steps
 1. build the jar 
 first we can use `mvn`  to build the jar
-`mvn clean package`  and to skip tests we can use `-DskipTests`
+`$ mvn clean package`  and to skip tests we can use `-DskipTests`
 
 2. Dokcerfile and Docker Compose 
 ```
@@ -20,8 +20,8 @@ $ docker-compose up
 
 3. push image in dockerHub
 ```
-docker tag sherifkhedr/capiter:capiter-task_java-app
-docker push sherifkhedr/capiter:capiter-task_java-app
+$ docker tag sherifkhedr/capiter:capiter-task_java-app
+$ docker push sherifkhedr/capiter:capiter-task_java-app
 ```
 4. GitHub Actions for Pipeline
 [files mentioned in mavenfile](.github/workflows)
@@ -33,9 +33,9 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
  
  - ###### Deploy mysql with Helm Chart as custer with 3 instances ; i used [Bitnami Helm Chart](https://bitnami.com/stack/mysql/helm) for the deploy
  
- `kubectl create ns mydb`
+ `$ kubectl create ns mydb`
   ```
- helm install mysql \
+ $ helm install mysql \
   --set global.storageClass=rook-cephfs\
   --set secondary.replicaCount=2\
   --set auth.rootPassword=mypassword\
@@ -50,18 +50,18 @@ the previous command will create one master and 2 slaves also create `springboot
     
 - ###### Deploy java image on kubernetes
 ```
-kubectl create ns myapp
-helm create myapp
-helm install myapp .
+$ kubectl create ns myapp
+$ helm create myapp
+$ helm install myapp .
 ```
 
 ###### Deploy Traefik as Ingress-Controller 
 >* *Note: the purpose of using [traefik](https://doc.traefik.io/traefik/getting-started/install-traefik/) instead of nginx-controler to avoid annotaion problems.*
 ```
-kubectl create ns traefik-ingress
-helm repo add traefik https://helm.traefik.io/traefik
-helm repo update
-helm install --namespace=traefik-ingress \
+$ kubectl create ns traefik-ingress
+$ helm repo add traefik https://helm.traefik.io/traefik
+$ helm repo update
+$ helm install --namespace=traefik-ingress \
     traefik traefik/traefik
 ```
 - create ingress file mentioned in 
@@ -76,7 +76,11 @@ configInline:
      addresses:
      - 192.168.1.240-192.168.1.250
 
-helm repo add metallb https://metallb.github.io/metallb
-helm install metallb metallb/metallb -f values.yaml
+$ helm repo add metallb https://metallb.github.io/metallb
+$ helm install metallb metallb/metallb -f values.yaml
 ```
-
+######## to caccess from my browser
+```
+cat >> /etc/hosts
+<metallb ip>  myapp.capiter.com   
+```
