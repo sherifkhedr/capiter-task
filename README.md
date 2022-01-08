@@ -12,11 +12,11 @@ first we can use `mvn`  to build the jar
 `mvn clean package`  and to skip tests we can use `-DskipTests`
 
 2. Dokcerfile and Docker Compose 
-```docker-compose build
-docker-compose up```
+`docker-compose build`
+`docker-compose up`
 [the files is mentioned in Docker-files](Docker-files)
 
 3. push image in dockerHub
-```docker tag sherifkhedr/capiter:capiter-task_java-app
-docker push sherifkhedr/capiter:capiter-task_java-app ```
+`docker tag sherifkhedr/capiter:capiter-task_java-app`
+`docker push sherifkhedr/capiter:capiter-task_java-app `
 
