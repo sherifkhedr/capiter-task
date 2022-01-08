@@ -43,4 +43,4 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
   --set auth.username=test\
   --set auth.password=test \
     bitnami/mysql -n mydb
-    ```
+    
