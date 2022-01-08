@@ -45,7 +45,7 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
     bitnami/mysql -n mydb 
   ```
     
- >*Note:
+ > *Note:
     the previous command will create one master and 2 slaves also create `springboot_mysql_example` database and use `rook-cephfs` as persistent volume
     
 - ###### Deploy java image on kubernetes
