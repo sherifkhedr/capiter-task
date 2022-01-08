@@ -66,7 +66,7 @@ $ helm install --namespace=traefik-ingress \
 ```
 - create ingress file mentioned in 
 
-- ###### Deploy MetalLB as load Balancer in from of Ingress-Controller , this is Bonus from me
+- Bonus:  Deploy MetalLB as load Balancer in from of Ingress-Controller , this is Bonus from me
 ```
 MetalLB configs are set in values.yaml under configInLine:
 configInline:
