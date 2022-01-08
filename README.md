@@ -92,7 +92,7 @@ cat >> /etc/hosts
 9. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
 
-10. Resourses that used in this Task
+## Resourses that used in this Task
 - [Kubernetes.io](https://kubernetes.io/)
 - [Traefik.io](https://doc.traefik.io/traefik/)
 - [MetalLB](https://metallb.universe.tf/installation/)
