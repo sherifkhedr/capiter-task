@@ -26,8 +26,7 @@ docker push sherifkhedr/capiter:capiter-task_java-app
 4. GitHub Actions for Pipeline
 [files mentioned in mavenfile](.github/workflows)
 
-6. Deploy on kubernest by Helm chart
-[^note:]
- I don't used Minikube and instead I used my existing kubernest cluster consist of one master node and 2 worker nodes
+5. Deploy on kubernest by Helm chart
+> I don't used Minikube and instead I used my existing kubernest cluster consist of one master node and 2 worker nodes
  the cluster have Rook-Cehpfs as Persistent Storage
  
