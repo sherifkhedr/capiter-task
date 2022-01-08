@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: spring-prometheus-demo-service-monitor
+  labels:
+    release: prometheus-operator
+  namespace: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: spring-prometheus-demo
+  endpoints:
+  - port: http-traffic
+    path: "/actuator/prometheus"

@@ -1,0 +1,17 @@
+apiVersion:  networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-capiter
+  namespace: myapp
+spec:
+  rules:
+  - host: myapp.capiter.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        backend:
+          service:
+            name: myapp
+            port:
+              number: 80
+
