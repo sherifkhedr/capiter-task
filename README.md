@@ -55,6 +55,15 @@ helm create myapp
 helm install myapp .
 ```
 
-
+###### Deploy Traefik as Ingress-Controller 
+>* Note: the purpose of using [traefik](https://doc.traefik.io/traefik/getting-started/install-traefik/) instead of nginx-controler to avoid annotaion problems.
+```
+kubectl create ns traefik-ingress
+helm repo add traefik https://helm.traefik.io/traefik
+helm repo update
+helm install --namespace=traefik-ingress \
+    traefik traefik/traefik
+```
+- create ingress file mentioned in 
       
     
