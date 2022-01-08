@@ -65,5 +65,18 @@ helm install --namespace=traefik-ingress \
     traefik traefik/traefik
 ```
 - create ingress file mentioned in 
-      
-    
+
+- ###### Deploy MetalLB as load Balancer in from of Ingress-Controller , this is Bonus from me
+```
+MetalLB configs are set in values.yaml under configInLine:
+configInline:
+  address-pools:
+   - name: default
+     protocol: layer2
+     addresses:
+     - 192.168.1.240-192.168.1.250
+
+helm repo add metallb https://metallb.github.io/metallb
+helm install metallb metallb/metallb -f values.yaml
+```
+
