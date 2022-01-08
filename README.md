@@ -95,8 +95,8 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 helm install prometheus prometheus-community/kube-prometheus-stack
 ```
-> *you should enable micrometer plugni in [pom.xml](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/pom.xml#L51) to enable prometheus to fetch metrics* \
-also enable endpoints in [application.properties](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/src/main/resources/application.properties#L29)
+> *you should enable micrometer plugni in [pom.xml](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/pom.xml#L51) to enable prometheus to fetch metrics \
+also enable endpoints in [application.properties](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/src/main/resources/application.properties#L29)*
 
 9. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
