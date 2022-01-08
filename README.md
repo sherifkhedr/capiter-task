@@ -7,6 +7,8 @@
 6. install traefik ingress contoller
 7. install Prometheus on kubernetes
 8. How to debug mysql and java performance
+9. Create machine on aws with Terraform
+10. Resources 
 
 ## steps
 1. build the jar 
@@ -86,6 +88,10 @@ $ helm install metallb metallb/metallb -f values.yaml
 cat >> /etc/hosts
 <metallb ip>  myapp.capiter.com   
 ```
+
+9. ## create vm on aws with terraform in automted fashion
+the files mentioned in [terraform folder](terraform-aws)
+
 ## Resourses that used in this Task
 - [Kubernetes.io](https://kubernetes.io/)
 - [Traefik.io](https://doc.traefik.io/traefik/)
