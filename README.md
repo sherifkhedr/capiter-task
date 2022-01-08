@@ -3,7 +3,7 @@
 - Dockerfile and Docker Compose
 - Github Actions
 - Push Docker image on dockerHub
-- Create Helm Chart for Java app
+- Deploy java image and mysql on kubernetes with Helm Chart 
 - deploy traefik ingress contoller
 
 ## steps
@@ -25,3 +25,9 @@ docker push sherifkhedr/capiter:capiter-task_java-app
 ```
 4. GitHub Actions for Pipeline
 [files mentioned in mavenfile](.github/workflows)
+
+6. Deploy on kubernest by Helm chart
+[^note:]
+ I don't used Minikube and instead I used my existing kubernest cluster consist of one master node and 2 worker nodes
+ the cluster have Rook-Cehpfs as Persistent Storage
+ 
