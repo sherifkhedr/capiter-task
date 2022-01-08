@@ -23,4 +23,5 @@ docker-compose up
 docker tag sherifkhedr/capiter:capiter-task_java-app
 docker push sherifkhedr/capiter:capiter-task_java-app
 ```
-
+4. GitHub Actions for Pipeline
+[files mentioned in mavenfile](.github/workflows)
