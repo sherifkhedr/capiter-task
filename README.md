@@ -68,7 +68,7 @@ $ helm repo update
 $ helm install --namespace=traefik-ingress \
     traefik traefik/traefik
 ```
-- create ingress file mentioned in 
+- create ingress file mentioned in [ingress folder](k8s/ingress)
 
 - ###### Bonus:  Deploy MetalLB as a load Balancer in from of Ingress-Controller , this is Bonus from me
 ```
