@@ -27,7 +27,7 @@ docker push sherifkhedr/capiter:capiter-task_java-app
 [files mentioned in mavenfile](.github/workflows)
 
 5. Deploy on kubernest by Helm chart
-> Note: 
+> *Note: 
 I don't used Minikube and instead I used my existing kubernetes cluster consist of one master node and 2 worker nodes;
- the cluster have Rook-Cehpfs as Persistent Storage
+ the cluster have Rook-Cehpfs as Persistent Storage*
  
