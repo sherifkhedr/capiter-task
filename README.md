@@ -46,7 +46,7 @@ I don't used Minikube and instead I used my existing kubernetes cluster consist 
   ```
     
 >* *Note:
-the previous command will create one master and 2 slaves also create `springboot_mysql_example` database and use `rook-cephfs` as persistent volume
+the previous command will create one master and 2 slaves also create `springboot_mysql_example` database and use `rook-cephfs` as persistent volume*
     
 - ###### Deploy java image on kubernetes
 ```
@@ -56,7 +56,7 @@ helm install myapp .
 ```
 
 ###### Deploy Traefik as Ingress-Controller 
->* *Note: the purpose of using [traefik](https://doc.traefik.io/traefik/getting-started/install-traefik/) instead of nginx-controler to avoid annotaion problems.
+>* *Note: the purpose of using [traefik](https://doc.traefik.io/traefik/getting-started/install-traefik/) instead of nginx-controler to avoid annotaion problems.*
 ```
 kubectl create ns traefik-ingress
 helm repo add traefik https://helm.traefik.io/traefik
