@@ -3,16 +3,15 @@ services:
   app-mysql:
     image: mysql:8
     command: --default-authentication-plugin=mysql_native_password
-    #  command:  --disable-partition-engine-check
     restart: always
     volumes:
       - db_data01:/var/lib/mysql
       - "./db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql"
     environment:
-      MYSQL_DATABASE: springboot_mysql_example
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: '$MYSQLDB_DATABASE'
+      MYSQL_ROOT_PASSWORD: '$MYSQLDB_PASSWORD'
     ports:
-      - 3306:3306
+      - $MYSQLDB_Host_PORT:$MYSQLDB_PORT
   java-app:
    build:
     context: .
@@ -21,9 +20,9 @@ services:
     - "8081:8080"
    restart: always
    environment:
-        SPRING_DATASOURCE_URL: jdbc:mysql://app-mysql:3306/springboot_mysql_example?createDatabaseIfNotExist=true
-        SPRING_DATASOURCE_USERNAME: root
-        SPRING_DATASOURCE_PASSWORD: root
+        SPRING_DATASOURCE_URL: jdbc:mysql://app-mysql:$MYSQLDB_PORT/$MYSQLDB_DATABASE?createDatabaseIfNotExist=true
+        SPRING_DATASOURCE_USERNAME: '$MYSQLDB_USER'
+        SPRING_DATASOURCE_PASSWORD: '$MYSQLDB_PASSWORD'
    depends_on:
       - app-mysql
 volumes:
