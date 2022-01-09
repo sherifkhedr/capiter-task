@@ -68,7 +68,7 @@ $ helm repo update
 $ helm install --namespace=traefik-ingress \
     traefik traefik/traefik
 ```
-- create ingress file mentioned in 
+- create ingress file mentioned in [ingress folder](k8s/ingress)
 
 - ###### Bonus:  Deploy MetalLB as a load Balancer in from of Ingress-Controller , this is Bonus from me
 ```
@@ -88,6 +88,15 @@ $ helm install metallb metallb/metallb -f values.yaml
 cat >> /etc/hosts
 <metallb ip>  myapp.capiter.com   
 ```
+
+7. install prometheus and grafan on kubernetes to collect metrics
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install prometheus prometheus-community/kube-prometheus-stack
+```
+> *you should enable micrometer plugni in [pom.xml](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/pom.xml#L51) to enable prometheus to fetch metrics \
+also enable endpoints in [application.properties](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/src/main/resources/application.properties#L29)*
 
 9. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
