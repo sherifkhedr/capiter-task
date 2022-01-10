@@ -117,7 +117,7 @@ as well as the previos commands for the app
 
 ```
 
-10. create vm on aws with terraform in automted fashion
+9. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
 
 ### Resourses that used in this Task
