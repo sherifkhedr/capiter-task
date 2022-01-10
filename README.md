@@ -98,7 +98,20 @@ helm install prometheus prometheus-community/kube-prometheus-stack
 > *you should enable micrometer plugni in [pom.xml](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/pom.xml#L51) to enable prometheus to fetch metrics \
 also enable endpoints in [application.properties](https://github.com/sherifkhedr/capiter-task/blob/master/spring-boot-mysql-example/src/main/resources/application.properties#L29)*
 
-9. create vm on aws with terraform in automted fashion
+8. explain to debug mysql and java app perofrmance 
+
+```
+first of all we should check log files for the app
+there varios commands to check performance for any app like
+
+top => to check load on cpu 
+ps aux => to check the processes
+vmstate for memory
+
+
+```
+
+10. create vm on aws with terraform in automted fashion
 the files mentioned in [terraform folder](terraform-aws)
 
 ### Resourses that used in this Task
