@@ -107,6 +107,12 @@ there varios commands to check performance for any app like
 top => to check load on cpu 
 ps aux => to check the processes
 vmstate for memory
+iostat for I/O 
+##  for mysql  ##
+look at mysql log
+check slow queries
+check connection pol 
+as well as the previos commands for the app
 
 
 ```
